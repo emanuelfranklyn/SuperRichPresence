@@ -1,0 +1,247 @@
+html {
+    background-color: #151515;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.UserPart {
+    background-color: #5577FF;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    margin-bottom: 0;
+}
+.UserPart img {
+    width: 10em;
+    margin: 15px;
+    border-radius: 500px;
+    border: 2px solid #1133AA;
+    background-color: #000077;
+}
+.UserPart p {
+    position: relative;
+    margin: 15px;
+    color: #FFF;
+    bottom: 3em;
+    display: inline-block;
+    font-size: 1.9em;
+    font-weight: bold;
+}
+.UserPart span {
+    font-weight: normal;
+    color: #AAA;
+    font-size: 0.7em;
+}
+.GamePart {
+    background-color: #3355BB;
+    margin-top: 0;
+}
+.GamePart * {
+    margin: 15px;
+}
+.GamePart .LargeImage {
+    width: 11em;
+}
+.GamePart .SmallImage {
+    position: relative;
+    width: 5em;
+    top: 1.5em;
+    left: -6em;
+    background-color: #3355BB;
+    padding: 3px;
+    border-radius: 500px;
+}
+.GamePart .Playing{
+    position: relative;
+    margin: 0px;
+    margin-left: 20px;
+    padding-top: 15px;
+    color: #FFF;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.GamePart .SRPC {
+    position: relative;
+    margin: 0px;
+    margin-left: 20px;
+    padding-top: 15px;
+    color: #FFF;
+    font-size: 1.3em;
+    font-weight: bold;
+    display: inline-block;
+    left: -7em;
+    top: -7em;
+}
+.GamePart .detailsInput {
+    position: relative;
+    background-color: #2244AA;
+    color: #FFF;
+    left: -12.7em;
+    top: -5em;
+    font-size: 1.3em;
+    width: 20em;
+}
+.GamePart .stateInput {
+    position: relative;
+    background-color: #2244AA;
+    color: #FFF;
+    left: 12em;
+    top: -7em;
+    font-size: 1em;
+    width: 26em;
+    display: inline-block;
+}
+.GamePart .SelectImageBigBox  {
+    position: relative;
+    opacity: 0;
+    top: -17em;
+    left: -2em;
+    width: 15em;
+    padding-top: -5em;
+    margin-bottom: -5em;
+}
+.GamePart .SelectImageBigBox .SelectBigImage{
+    position: relative;
+    background-color: #050505;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 15em;
+    top: -3em;
+}
+.GamePart .SelectImageBigBox .SelectBigImage img {
+    width: 5.5em;
+}
+.GamePart .SelectImageBigBox .DOT {
+    position: relative;
+    left: 4em;
+    width: 3em;
+}
+.GamePart .SelectImageSmallBox  {
+    position: relative;
+    opacity: 0;
+    top: -15em;
+    left: 1.5em;
+    width: 15em;
+    padding-top: -5em;
+}
+.GamePart .SelectImageSmallBox .SelectSmallImage{
+    position: relative;
+    background-color: #050505;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 15em;
+    top: -3em;
+}
+.GamePart .SelectImageSmallBox .SelectSmallImage img {
+    width: 5.5em;
+}
+.GamePart .SelectImageSmallBox .DOT {
+    position: relative;
+    left: 6em;
+    width: 3em;
+}
+.SaveButton {
+    background-color: #333;
+    padding: 15px;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    margin-top: -5em;
+}
+.SaveButton button {
+    position: relative;
+    margin: auto;
+    font-size: 35px;
+    width: 100%;
+    height: 75px;
+    background-color: #222;
+    border-radius: 500px;
+    border: 3px solid #111;
+    color: #FFF;
+}
+.SaveButton button:hover {
+    border: 3px solid #777;
+    background-color: #444;
+}
+.SaveButton button:focus {
+    border: 3px solid #FFF;
+    background-color: #777;
+    color: #333;
+}
+@keyframes Appeair {
+    0% {opacity: 0;display: none;}
+    100% {opacity: 100;display: show;}
+}
+@keyframes DisAppeair {
+    0% {opacity: 100;display: show;}
+    50% {opacity: 0;display: show;}
+    100% {opacity: 0;display: none;}
+}
+#Apper {
+    animation: Appeair 0.15s;
+    opacity: 100;
+    display: show;
+}
+#Disapper {
+    animation: DisAppeair 0.3s;
+    opacity: 0;
+    display: none;
+}
+.BigImageInput {
+    position: relative;
+    background-color: #050505;
+    border-radius: 15px;
+    width: 15em;
+    align-items: center;
+    height: 3.3em;
+    top:-25em;
+}
+.BigImageInput input {
+    position: relative;
+    width: 15em;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #444;
+}
+.BigImageInput .DOT {
+    position: relative;
+    transform: scaleY(-1);
+    width: 1.5em;
+    top: -1.3em;
+    left: 4em;
+}
+.SmallImageInput {
+    position: relative;
+    background-color: #050505;
+    border-radius: 15px;
+    width: 15em;
+    align-items: center;
+    height: 3.3em;
+    top:-17.5em;
+    left: 3em;
+}
+.SmallImageInput input {
+    position: relative;
+    width: 15em;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #444;
+}
+.SmallImageInput .DOT {
+    position: relative;
+    transform: scaleY(-1);
+    width: 1.5em;
+    top: -1.3em;
+    left: 5em;
+}
+#time {
+    position: relative;
+    display: inline-block;
+    top: -6em;
+    left: -19em;
+}
+.Unussless * {
+    position: relative;
+    top: -7.5em;
+    width: 15vw;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SuperRichPresence</title>
+    <script src="http://localhost:47896/frontend/socket.io.js"></script>
+    <script src="http://localhost:47896/frontend/FrontBackend.js"></script>
+    <link rel="icon" type="image/png" href="/frontend/favicon.png"/>
+    <link rel="stylesheet" type="text/css" href="/frontend/Main.css">
+    <meta charset="utf-8"/>
+  </head>
+  <body>
+    <div class="UserPart">
+      <img class="UserAvatar" src="/frontend/NoImage.png">
+      <p class="UserName"><span class="Discriminator"></span></p>
+    </div>
+    <div class="GamePart">
+      <p class="Playing">Jogando</p>
+      <img class="LargeImage" src="/frontend/NoImage.png">
+      <img class="SmallImage" src="/frontend/NoImage.png">
+      <p class="SRPC">SPIN-RPC</p>
+      <input class="detailsInput" placeholder="Site/Ação">
+      <input class="stateInput" placeholder="Navegador/App">
+      <input type="time" id="time" class="startTimeInput" pattern="[0-23]{2}:[0-59]{2}:[0-59]{2}" step="1" placeholder="Horario de inicio">
+      <input type="time" id="time" class="endTimeInput" pattern="[0-23]{2}:[0-59]{2}:[0-59]{2}" step="1" placeholder="Horario do termino">
+      <div class="Unussless">
+        <input class="partyIdInput" placeholder="Id da festa 🎉">
+        <input class="partyMaxInput" placeholder="Numero maximo de pessoas da festa 🎉">
+        <input class="spectateSecretInput" placeholder="Codigo secreto para spectar">
+        <input class="joinSecretInput" placeholder="Codigo secreto para participar">
+      </div>
+      <div class="BigImageInput" id="Disapper">
+        <input class="largeImageTextInput" placeholder="Texto da imagem grande">
+        <img class="DOT" src="https://cdn2.iconfinder.com/data/icons/freecns-cumulus/16/519684-191_FormTriangle-512.png">
+      </div>
+      <div class="SmallImageInput" id="Disapper">
+        <input class="smallImageTextInput" placeholder="Texto da imagem pequena">
+        <img class="DOT" src="https://cdn2.iconfinder.com/data/icons/freecns-cumulus/16/519684-191_FormTriangle-512.png">
+      </div>
+      <div class="SelectImageBigBox" id="Disapper">
+        <img class="DOT" src="https://cdn2.iconfinder.com/data/icons/freecns-cumulus/16/519684-191_FormTriangle-512.png">
+        <div class="SelectBigImage"></div>
+      </div>
+      <div class="SelectImageSmallBox" id="Disapper">
+        <img class="DOT" src="https://cdn2.iconfinder.com/data/icons/freecns-cumulus/16/519684-191_FormTriangle-512.png">
+        <div class="SelectSmallImage"></div>
+      </div>
+    </div>
+    <div class="SaveButton">
+      <button class="Save">Salvar</button>
+    </div>
+  </body>
+</html>

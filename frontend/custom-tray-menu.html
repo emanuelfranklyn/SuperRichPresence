@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SuperRichPresence</title>
+    <meta charset="utf-8"/>
+  </head>
+  <style>
+    html {
+      font-family: arial,helvetica,sans-serif;
+      background-color: #555;
+    }
+    .AreYouSureExit {
+      position: absolute;
+      margin: -8px;
+      width: 100vw;
+      height: 100vh;
+      background: rgb(0,0,0);
+      background: linear-gradient(180deg, rgba(25,25,25,0.950) 0%, rgba(50,50,50,0.925) 100%); 
+      color: #FFF;
+    }
+    .AYSEWarning {
+      position: relative;
+      font-size: 1.8em;
+      text-align: center;
+    }
+    .AYSEWarning2 {
+      position: relative;
+      font-size: 0.9em;
+      text-align: center;
+    }
+    .AYSEYes {
+      position: relative;
+      background-color: #FF5555;
+      margin-left: 4.5em;
+      width: 6em;
+      height: 3em;
+      color: #FFF;
+      border-radius: 500px;
+      border: 3px solid #222;
+    }
+    .AYSENo {
+      position: relative;
+      background-color: #77FF77;
+      margin-left: 1em;
+      width: 6em;
+      height: 3em;
+      color: #222;
+      border-radius: 500px;
+      border: 3px solid #222;
+    }
+    .AYSENo:hover {
+      border: 3px solid #777;
+    }
+    .AYSEYes:hover {
+      border: 3px solid #777;
+    }
+    .TopBar {
+      background-color: #333;
+      margin: -8px;
+      height: 3em;
+    }
+    .TopBar Button {
+      height: 2em;
+      margin-top: 0.7em;
+      margin-left: 0.5em;
+      width: 45vw;
+    }
+    .AppLogo {
+      width: 25%;
+      margin-left: 37.5%;
+      margin-top: 50%;
+    }
+  </style>
+  <body>
+    <div class="AreYouSureExit" hidden>
+      <p class="AYSEWarning">Você tem certeza que deseja sair?</p>
+      <p class="AYSEWarning2">Se o editor ainda estiver aberto feche-o</p>
+      <button class="AYSEYes">Sim</button>
+      <button class="AYSENo">Não</button>
+    </div>
+    <div class="TopBar">
+      <button class="OppenBigVisualization">Abrir Editor</button>
+      <button class="Exit">Sair</button>
+    </div>
+    <img class="AppLogo" src="favicon.png">
+  </body>
+  <script>
+    let Oppens = false;
+    let Jin;
+    var gui = require('nw.gui');
+    document.getElementsByClassName("OppenBigVisualization")[0].addEventListener('click', ()=> {
+      var win = gui.Window.get();
+      win.hide()
+      if (!Oppens) {
+        gui.Window.open('./frontend/index.html', {
+          width: 965, height: 665,
+        }, function(win) {
+          Oppens = true;
+          Jin = win;
+          win.moveTo(window.screen.availWidth/2-964/2, window.screen.availHeight/2-664/2);
+          win.on('close', ()=> {
+            win.hide()
+          })
+        });
+      } else {
+        Jin.show()
+      }
+    })
+    document.getElementsByClassName("Exit")[0].addEventListener('click', ()=>{
+      document.getElementsByClassName("AreYouSureExit")[0].attributes.removeNamedItem("hidden");
+      document.getElementsByClassName("AYSEYes")[0].addEventListener('click', ()=>{
+        console.log("FECHANDO!")
+        var win = gui.Window.get();
+        gui.App.closeAllWindows();
+        gui.App.quit();
+      })
+      document.getElementsByClassName("AreYouSureExit")[0].addEventListener('click', ()=>{
+        document.getElementsByClassName("AreYouSureExit")[0].setAttribute("Hidden", "true")
+      })
+      document.getElementsByClassName("AYSENo")[0].addEventListener('click', ()=>{
+        document.getElementsByClassName("AreYouSureExit")[0].setAttribute("Hidden", "true")
+      })
+    })
+  </script>
+  <script>
+  </script>
+</html>
